@@ -7,13 +7,21 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "nodemon"
+    "babel-node": "babel-node --presets=env",
+    "start": "nodemon --exec npm run babel-node -- ./bin/www",
+    "lint": "eslint . --ext .js"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "express": "^4.16.3",
+    "morgan": "^1.9.0",
     "nodemon": "^1.18.3"
+  },
+  "devDependencies": {
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
   }
 }

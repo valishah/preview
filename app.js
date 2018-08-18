@@ -1,12 +1,15 @@
+import logger from 'morgan';
 const express = require('express');
 
 const app = express();
-// const port = process.env.PORT || 5000;
+
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
+
 
 app.get('/api/hello', (req, res) => {
   res.send({ express: 'Hello From Express' });
 });
-
-// app.listen(port, () => console.log(`Listening on port ${port}`));
 
 module.exports = app;

@@ -1,0 +1,19 @@
+{
+  "name": "linkpreview",
+  "version": "1.0.0",
+  "description": "Fetch link preview based on meta information",
+  "main": "app.js",
+  "author": "Vali Shah",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "nodemon"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "express": "^4.16.3",
+    "nodemon": "^1.18.3"
+  }
+}

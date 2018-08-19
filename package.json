@@ -9,7 +9,8 @@
   "scripts": {
     "babel-node": "babel-node --presets=env",
     "start": "nodemon --exec npm run babel-node -- ./bin/www",
-    "lint": "eslint . --ext .js"
+    "lint": "eslint . --ext .js",
+    "deploy":"gcloud app deploy ./app.yaml --project url-meta-preview --no-promote --no-stop-previous-version --version 1"
   },
   "dependencies": {
     "axios": "^0.18.0",

@@ -26,7 +26,7 @@
     "morgan": "^1.9.1",
     "nodemon": "^1.18.3",
     "react-native-link-preview": "^1.3.4",
-    "snyk": "^1.192.4"
+    "snyk": "^1.230.5"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

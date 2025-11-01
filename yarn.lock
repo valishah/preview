@@ -16,6 +16,11 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
+"@babel/runtime@^7.21.0":
+  version "7.28.4"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.28.4.tgz#a70226016fabe25c5783b2f22d3e1c9bc5ca3326"
+  integrity sha512-Q/N6JNWvIvPnLDvjlE1OUBLPQHH6l3CltCEsHIujp45zQUSSh8K+gHnaEX45yAT1nyngnINhvWtzN+Nb9D8RAQ==
+
 "@google-cloud/common@^0.19.2":
   version "0.19.2"
   resolved "https://registry.yarnpkg.com/@google-cloud/common/-/common-0.19.2.tgz#8928b071e452e4de9f6ae204654d5f9045bec437"
@@ -383,6 +388,11 @@ array-unique@^0.3.2:
 arrify@1.0.1, arrify@^1.0.0, arrify@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/arrify/-/arrify-1.0.1.tgz#898508da2226f380df904728456849c1501a4b0d"
+
+arrify@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/arrify/-/arrify-2.0.1.tgz#c9655e9331e0abcd588d2a7cad7e9956f66701fa"
+  integrity sha512-3duEwti880xqi4eAMN8AyR4a0ByT90zoYdLlevfrvU43vb0YZwZVfxOgxWrLXXXpyugL0hNZc9G6BiB5B3nUug==
 
 ascli@~1:
   version "1.0.1"
@@ -1552,6 +1562,18 @@ data-urls@^1.0.0:
     whatwg-mimetype "^2.1.0"
     whatwg-url "^7.0.0"
 
+dataloader@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/dataloader/-/dataloader-1.4.0.tgz#bca11d867f5d3f1b9ed9f737bd15970c65dff5c8"
+  integrity sha512-68s5jYdlvasItOJnCuI2Q9s4q98g0pCyL3HrcKJu8KNugUl8ahgmZYg38ysLTgQjjXX3H8CJLkAvWrclWfcalw==
+
+date-fns@^2.8.1:
+  version "2.30.0"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.30.0.tgz#f367e644839ff57894ec6ac480de40cae4b0f4d0"
+  integrity sha512-fnULvOpxnC5/Vg3NCiWelDsLiUc9bRwAPs/+LfTLNvetFCtCTN+yQz15C/fs4AwX1R9K5GLtLfn8QW+dWisaAw==
+  dependencies:
+    "@babel/runtime" "^7.21.0"
+
 debug@2.6.9, debug@^2.1.2, debug@^2.2.0, debug@^2.3.3, debug@^2.6.8, debug@^2.6.9:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
@@ -2152,7 +2174,7 @@ extend-shallow@^3.0.0, extend-shallow@^3.0.2:
     assign-symbols "^1.0.0"
     is-extendable "^1.0.1"
 
-extend@^3.0.0, extend@^3.0.1, extend@~3.0.2:
+extend@^3.0.0, extend@^3.0.1, extend@^3.0.2, extend@~3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/extend/-/extend-3.0.2.tgz#f8b1136b4071fbd8eb140aff858b1019ec2915fa"
 
@@ -2622,20 +2644,23 @@ grpc@^1.10.0:
     node-pre-gyp "^0.10.0"
     protobufjs "^5.0.3"
 
-gstore-node@^4.2.5:
-  version "4.2.5"
-  resolved "https://registry.yarnpkg.com/gstore-node/-/gstore-node-4.2.5.tgz#9bc8e051e33dfa50c8b2cce8b42ac93816103367"
+gstore-node@^7.2.5:
+  version "7.2.8"
+  resolved "https://registry.yarnpkg.com/gstore-node/-/gstore-node-7.2.8.tgz#482d16dba6d9f37716d303240ce3f2a8e5a6c7da"
+  integrity sha512-uB74gjPNXBWOnddAZb87ZPn02bbJsuKpMP53YCHujYf2FOk9qfVmO/giB54YB7n+8vuPh/xRe0/W6GIo3881jA==
   dependencies:
-    "@google-cloud/datastore" "^1.4.1"
-    arrify "^1.0.1"
-    extend "^3.0.1"
-    is "^3.2.1"
-    moment "^2.22.1"
-    nsql-cache "^1.1.2"
-    nsql-cache-datastore "^1.1.2"
+    arrify "^2.0.1"
+    dataloader "^1.4.0"
+    date-fns "^2.8.1"
+    extend "^3.0.2"
+    is "^3.3.0"
+    lodash.get "^4.4.2"
+    lodash.set "^4.3.2"
+    nsql-cache "^1.1.5"
+    nsql-cache-datastore "^1.1.6"
     optional "^0.1.4"
-    promised-hooks "^3.1.0"
-    validator "^10.1.0"
+    promised-hooks "^3.1.1"
+    validator "^13.0.0"
 
 gtoken@^2.3.0:
   version "2.3.0"
@@ -3177,9 +3202,14 @@ is-yarn-global@^0.3.0:
   resolved "https://registry.yarnpkg.com/is-yarn-global/-/is-yarn-global-0.3.0.tgz#d502d3382590ea3004893746754c89139973e232"
   integrity sha512-VjSeb/lHmkoyd8ryPVIKvOCn4D1koMqY+vqyjjUfc3xyKtP4dYOxM44sZrnqQSzSds3xyOrUTLTC9LVCVgLngw==
 
-is@^3.2.0, is@^3.2.1:
+is@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/is/-/is-3.2.1.tgz#d0ac2ad55eb7b0bec926a5266f6c662aaa83dca5"
+
+is@^3.3.0:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/is/-/is-3.3.2.tgz#dfc285f4937f08564675f2f17cc6ac6cd2113ace"
+  integrity sha512-a2xr4E3s1PjDS8ORcGgXpWx6V+liNs+O3JRD2mb9aeugD7rtkkZ0zgLdYgw0tWsKhsdiezGYptSiMlVazCBTuQ==
 
 isarray@1.0.0, isarray@^1.0.0, isarray@~1.0.0:
   version "1.0.0"
@@ -3778,6 +3808,11 @@ lodash.flatten@^4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.flatten/-/lodash.flatten-4.4.0.tgz#f31c22225a9632d2bbf8e4addbef240aa765a61f"
 
+lodash.get@^4.4.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
+  integrity sha512-z+Uw/vLuy6gQe8cfaFWD7p0wVv8fJl3mbzXh33RS+0oW2wvUqiRXiQ69gLWSLpgB5/6sU+r6BlQR0MBILadqTQ==
+
 lodash.isstring@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/lodash.isstring/-/lodash.isstring-4.0.1.tgz#d527dfb5456eca7cc9bb95d5daeaf88ba54a5451"
@@ -3785,6 +3820,11 @@ lodash.isstring@^4.0.1:
 lodash.merge@^4.6.1:
   version "4.6.2"
   resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
+
+lodash.set@^4.3.2:
+  version "4.3.2"
+  resolved "https://registry.yarnpkg.com/lodash.set/-/lodash.set-4.3.2.tgz#d8757b1da807dde24816b0d6a84bea1a76230b23"
+  integrity sha512-4hNPN5jlm/N/HLMCO43v8BXKq9Z7QdAGc/VGrRD61w8gN9g/6jF9A4L1pbUgBLCffi0w9VsXfTOij5x8iTyFvg==
 
 lodash.sortby@^4.7.0:
   version "4.7.0"
@@ -4003,10 +4043,6 @@ mkdirp@^0.5.1, mkdirp@^0.5.5:
   dependencies:
     minimist "^1.2.5"
 
-moment@^2.22.1:
-  version "2.22.2"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
-
 morgan@^1.9.1:
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/morgan/-/morgan-1.9.1.tgz#0a8d16734a1d9afbc824b99df87e738e58e2da59"
@@ -4193,15 +4229,17 @@ npmlog@^4.0.2:
     gauge "~2.7.3"
     set-blocking "~2.0.0"
 
-nsql-cache-datastore@^1.1.2:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/nsql-cache-datastore/-/nsql-cache-datastore-1.1.3.tgz#7c26786979fefa599e16c686decd6ba42a89aad7"
+nsql-cache-datastore@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/nsql-cache-datastore/-/nsql-cache-datastore-1.1.6.tgz#af8ff42948b268715ffe280d8b33c025e80883f3"
+  integrity sha512-lwSFkJ3iLbJcUAliU6w5783Usy3zViPKpykELLeCC99ReoiTCn0Jqcc6SiTqZA/ORX76yRJ1m1xRyHWra5Ju8w==
   dependencies:
     arrify "1.0.1"
 
-nsql-cache@^1.1.2:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/nsql-cache/-/nsql-cache-1.1.3.tgz#087107ceed383d55b3e599a1a3585943384dc004"
+nsql-cache@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/nsql-cache/-/nsql-cache-1.1.5.tgz#10619d77fd711531a2e25e9992166797e40d39ec"
+  integrity sha512-QRJe7Z3fqUJc57NVTHsxRFXlCEIoLlb0FQMW5NOfWGMDq8Qcz4ampT2wnnvufT+T63uKgqvX4qwTAWMcQ3iuQw==
   dependencies:
     arrify "^1.0.1"
     cache-manager "^2.9.0"
@@ -4666,12 +4704,13 @@ progress@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.0.tgz#8a1be366bf8fc23db2bd23f10c6fe920b4389d1f"
 
-promised-hooks@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/promised-hooks/-/promised-hooks-3.1.0.tgz#a50915c222cc2a302a44ee07ae35d18453b2e9c1"
+promised-hooks@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/promised-hooks/-/promised-hooks-3.1.1.tgz#1bd6fb9ef0e7017b5c25f00d224411f46a6a68b6"
+  integrity sha512-yBR9maUUArxdtcnmDfHjo7jpCK+tReZHQkcHrcBhXLR0/FE2xJA0UiPl523ncQOuLyWBe2g3PswtmEGH18jU9A==
   dependencies:
-    arrify "^1.0.1"
-    is "^3.2.0"
+    arrify "^2.0.1"
+    is "^3.3.0"
 
 prompts@^0.1.9:
   version "0.1.14"
@@ -5865,9 +5904,10 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-validator@^10.1.0:
-  version "10.6.0"
-  resolved "https://registry.yarnpkg.com/validator/-/validator-10.6.0.tgz#a9bdce685b3c3e8480e7ebbb9eb95c54cd9733b0"
+validator@^13.0.0:
+  version "13.15.20"
+  resolved "https://registry.yarnpkg.com/validator/-/validator-13.15.20.tgz#054e9238109538a1bf46ae3e1290845a64fa2186"
+  integrity sha512-KxPOq3V2LmfQPP4eqf3Mq/zrT0Dqp2Vmx2Bn285LwVahLc+CsxOM0crBHczm8ijlcjZ0Q5Xd6LW3z3odTPnlrw==
 
 vary@~1.1.2:
   version "1.1.2"
